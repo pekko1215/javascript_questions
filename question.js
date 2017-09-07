@@ -26,6 +26,7 @@ $(function () {
             })
             questions.push(d);
             $("#questions").append(linker)
+            $("#questions").append($('<br/>'))
             arg.callee()
         }).fail(function (r) {
             $("#ansbutton").on("click", function () {
