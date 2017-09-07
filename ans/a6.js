@@ -10,5 +10,10 @@
         b: 7,
         c: "ぞば"
     }
-    return JSON.stringify(_Replacer(obj)) == JSON.stringify(Replacer(obj));
+    var obj2 = JSON.parse(JSON.stringify(obj));
+
+    _Replacer(obj);
+    Replacer(obj2);
+
+    return JSON.stringify(obj) == JSON.stringify(obj2);
 })()
