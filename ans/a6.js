@@ -12,8 +12,10 @@
     }
     var obj2 = JSON.parse(JSON.stringify(obj));
 
-    _Replacer(obj);
-    Replacer(obj2);
+    var f = function(r){return r+1}
+
+    _Replacer(f,obj);
+    Replacer(f,obj2);
 
     return JSON.stringify(obj) == JSON.stringify(obj2);
 })()
